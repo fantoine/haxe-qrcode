@@ -352,7 +352,7 @@ class QRSpec {
         // Frame ---------------------------------------------------------------
         // Cache of initial frames.
          
-        public static var frames : IntHash<QRFrame> = new IntHash();
+        public static var frames : Map<Int, QRFrame> = new Map<Int, QRFrame>();
 
         /** --------------------------------------------------------------------
          * Put a finder pattern.

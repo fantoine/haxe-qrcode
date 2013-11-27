@@ -6,8 +6,7 @@
 
 package demo;
 
-import neko.io.File;
-import neko.Sys;
+import sys.io.File;
 import qrcode.QRCode;
 import qrcode.QREncode;
 
@@ -15,8 +14,8 @@ import qrcode.ErrorCorrection;
 
 class Demo {
 	public static function main() {
-		var input	= File.stdin();
-		var output	= File.stdout();
+		var input	= Sys.stdin();
+		var output	= Sys.stdout();
 		while(true) {
 			// Get error correction
 			var error = null;
@@ -65,8 +64,8 @@ class Demo {
 	
 	static function line(length : Int, char : String) {
 		for(i in 0...(length + 2)) {
-			File.stdout().writeString(char);
+			Sys.stdout().writeString(char);
 		}
-		File.stdout().writeString("\n");
+		Sys.stdout().writeString("\n");
 	}
 }
